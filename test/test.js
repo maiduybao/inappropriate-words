@@ -26,9 +26,6 @@ describe("Filter tests", function() {
     describe('#clean', function () {
         const filter = new Filter();
 
-        it("Should replace a bad word within a sentence with asterisks except for first letter in non strict mode (******)", async function () {
-            (await filter.clean("Don't be an ash0le")).should.equal("Don't be an ******");
-        });
         it("Should replace a bad word within a sentence asterisks (******)", async function () {
             (await filter.clean("Don't be an ash0le")).should.equal("Don't be an ******");
         });
@@ -41,7 +38,7 @@ describe("Filter tests", function() {
             (await filter.clean("The cat ran fast")).should.equal("The cat ran fast");
         });
 
-        it("Should not replace anything within large text if there are no bad words", async function () {
+        it("Should replace anything within large text if there are bad words", async function () {
             (await filter.clean("Chapter One\n" +
                 "A Stop on the Salt Route\n" +
                 "1000 B.C.\n" +
