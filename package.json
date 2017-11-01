@@ -1,0 +1,24 @@
+{
+  "name": "inappropriate-words",
+  "version": "1.0.0",
+  "description": "catch bad, curse words",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiduybao/inappropriate-words.git"
+  },
+  "author": "Bao Mai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maiduybao/inappropriate-words/issues"
+  },
+  "homepage": "https://github.com/maiduybao/inappropriate-words#readme",
+  "dependencies": {
+    "badwords-list": "^1.0.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
